@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"  type="text/css" href="{{url_for('static', filename='style.css')}}">
+    <title>Search Owl</title>
+</head>
+<body>
+        <div class="chat-header">
+            <div class="avatar"></div>
+            <div class="title">Search <span style="color: #150f85;">Owl</span></div>
+            <div class="navcontent" style="text-align: right;">Home &nbsp&nbsp About &nbsp&nbsp Contact </div>
+        </div>
+        
+
+        <div class="chat-messages">
+            <div class="message user">
+                Hello, how can I help you?
+            </div>
+            <div class="message assistant">
+                recommendation: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            </div>
+            <div class="message assistant" >
+                recommendation: Nulla in libero auctor, sollicitudin eros ut, venenatis velit.
+
+            </div>
+            <div class="message assistant">
+                recommendation: Sed condimentum odio vel odio pellentesque, sed dictum lorem laoreet.
+
+            </div>
+
+            <!-- Add more messages here -->
+        </div>
+        <form action="{{ url_for('products') }}" method="post">
+        <div class="user-input">
+            <input type="text" name="search_response" placeholder="What u wanna search for...">
+            <button>Search</button>
+        </div>
+        
+    
+</body>
+</html>
